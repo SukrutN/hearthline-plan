@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@hearthline/domain": ["./packages/domain/src/index.ts"],
+      "@hearthline/application": ["./packages/application/src/index.ts"]
+    }
+  },
+  "include": ["packages/**/src/**/*.ts", "packages/**/test/**/*.ts", "vitest.config.ts"]
+}

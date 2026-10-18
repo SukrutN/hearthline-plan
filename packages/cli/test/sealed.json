@@ -1,0 +1,6 @@
+{
+  "width": 3,
+  "height": 1,
+  "walls": [[1, 0]],
+  "travelers": [{ "name": "Ada", "start": [0, 0], "goal": [2, 0] }]
+}

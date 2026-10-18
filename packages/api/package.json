@@ -1,0 +1,16 @@
+{
+  "name": "@hearthline/api",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    }
+  },
+  "dependencies": {
+    "@hearthline/application": "*",
+    "@hearthline/domain": "*"
+  },
+  "files": ["dist", "openapi.yaml"]
+}

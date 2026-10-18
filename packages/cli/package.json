@@ -1,0 +1,13 @@
+{
+  "name": "@hearthline/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "hearthline-plan": "./dist/main.js"
+  },
+  "dependencies": {
+    "@hearthline/application": "*",
+    "@hearthline/domain": "*"
+  },
+  "files": ["dist"]
+}

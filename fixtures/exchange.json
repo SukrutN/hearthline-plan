@@ -1,0 +1,13 @@
+{
+  "name": "Exchange",
+  "width": 3,
+  "height": 2,
+  "rows": [
+    "...",
+    "..."
+  ],
+  "travelers": [
+    { "name": "Ada", "start": [0, 1], "goal": [2, 1] },
+    { "name": "Bo", "start": [2, 1], "goal": [0, 1] }
+  ]
+}

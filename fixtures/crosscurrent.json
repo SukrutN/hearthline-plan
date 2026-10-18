@@ -1,0 +1,18 @@
+{
+  "name": "Crosscurrent",
+  "width": 10,
+  "height": 5,
+  "rows": [
+    "..........",
+    "..........",
+    "..........",
+    "..........",
+    ".........."
+  ],
+  "travelers": [
+    { "name": "Ada", "start": [6, 4], "goal": [8, 3] },
+    { "name": "Bo", "start": [8, 4], "goal": [6, 3] },
+    { "name": "Cal", "start": [1, 2], "goal": [3, 2] },
+    { "name": "Dee", "start": [2, 1], "goal": [2, 3] }
+  ]
+}

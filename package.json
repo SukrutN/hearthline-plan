@@ -1,0 +1,24 @@
+{
+  "name": "hearthline-plan",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty false",
+    "test": "tsc -b --pretty false && tsc -p tsconfig.tests.json --pretty false && vitest run",
+    "start": "node packages/api/dist/main.js",
+    "plan": "node packages/cli/dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  }
+}

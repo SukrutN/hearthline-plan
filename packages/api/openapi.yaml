@@ -1,0 +1,52 @@
+openapi: 3.1.0
+info:
+  title: Hearthline Plan
+  version: "1.0.0"
+  description: Joint plans for travelers on a shared clock. CBS and ICBS, sum of arrival times.
+paths:
+  /health:
+    get:
+      operationId: health
+      responses:
+        "200":
+          description: The process is serving.
+  /v1/fixtures:
+    get:
+      operationId: listFixtures
+      responses:
+        "200":
+          description: Named floors shipped with the service.
+  /v1/openapi.yaml:
+    get:
+      operationId: openApi
+      responses:
+        "200":
+          description: This document.
+  /v1/plans:
+    post:
+      operationId: createPlan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                solver:
+                  type: string
+                  enum: [cbs, icbs, both]
+                fixture:
+                  type: string
+                floor:
+                  type: object
+      responses:
+        "200":
+          description: A joint plan, or a search that proved none exists.
+        "400":
+          description: The document or fixture id is not acceptable.
+          content:
+            application/problem+json: {}
+        "422":
+          description: The floor is well formed and still has no collision-free plan.
+          content:
+            application/problem+json: {}
